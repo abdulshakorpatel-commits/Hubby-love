@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For My Hubby 💗</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Georgia,"Times New Roman",serif}
+body{background:#fff4f7;color:#542536;overflow-x:hidden}
+button,textarea,input{font:inherit}
+.page{min-height:100vh;display:none;padding:28px 18px 95px;position:relative}
+.page.active{display:block;animation:show .55s ease}
+@keyframes show{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.container{max-width:650px;margin:auto}
+.center{text-align:center}
+.eyebrow{text-transform:uppercase;letter-spacing:4px;font:12px Arial,sans-serif;color:#b04c70}
+h1{font-size:clamp(46px,13vw,82px);line-height:.9;color:#a92853;margin:15px 0}
+h2{font-size:clamp(31px,8vw,50px);line-height:1;color:#a92853;margin:10px 0 22px}
+h3{font-size:25px;color:#a92853}
+p{font-size:18px;line-height:1.7}
+.soft{font-family:Arial,sans-serif;color:#865669;font-size:14px}
+.card{background:rgba(255,255,255,.94);border:1px solid #f0ccd8;border-radius:30px;padding:25px;margin:18px 0;box-shadow:0 18px 45px rgba(131,39,70,.12)}
+.btn{border:0;border-radius:999px;padding:14px 24px;background:#ad2854;color:white;font-weight:bold;box-shadow:0 5px 0 #7d193a;margin:5px}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 #7d193a}
+.btn.alt{background:white;color:#a92853;border:2px solid #dda1b5;box-shadow:none}
+.row{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.hearts{font-size:30px;letter-spacing:8px;color:#d94f7a}
+.heart{position:fixed;pointer-events:none;opacity:.12;font-size:25px;animation:float 9s linear infinite}
+@keyframes float{from{transform:translateY(105vh) rotate(0)}to{transform:translateY(-15vh) rotate(180deg)}}
+.envelope{width:min(330px,88vw);height:210px;margin:55px auto 30px;position:relative}
+.env-back{position:absolute;inset:35px 0 0;background:#fff;border-radius:14px;box-shadow:0 15px 35px #79244322}
+.env-letter{position:absolute;left:9%;right:9%;top:53px;height:135px;background:#fffafc;border:1px solid #f0c8d5;border-radius:10px;padding:20px;z-index:2;text-align:center;transition:.7s}
+.env-flap{position:absolute;z-index:4;left:0;top:35px;width:0;height:0;border-left:165px solid transparent;border-right:165px solid transparent;border-top:110px solid #efa6bd;transform-origin:top;transition:.7s}
+.envelope.open .env-flap{transform:rotateX(180deg);z-index:1}
+.envelope.open .env-letter{transform:translateY(-75px)}
+.reason{display:none;text-align:center}
+.reason.active{display:block;animation:show .4s ease}
+.reason-number{display:inline-block;background:#f7c0d1;color:#9a2c50;border-radius:99px;padding:7px 18px;font-family:Arial,sans-serif;font-weight:bold}
+.reason-text{font-size:21px;line-height:1.7}
+.progress{height:7px;background:#f1cad7;border-radius:99px;margin:22px 0;overflow:hidden}
+.progress i{display:block;height:100%;width:20%;background:#a92853;transition:.4s}
+.cute{background:linear-gradient(145deg,#fff,#ffe8ef);text-align:center;border-radius:28px;padding:35px 20px;border:1px solid #f2c6d5}
+.cute .big{font-size:58px}
+.certificate{background:#fffdf5;border:8px double #c49755;padding:30px;text-align:center}
+.seal{width:76px;height:76px;border:3px solid #c49755;border-radius:50%;display:grid;place-items:center;margin:18px auto;font-size:30px}
+.edit{background:#fff6f9;border:2px dashed #e0a0b5;border-radius:20px;padding:18px}
+textarea,input{width:100%;border:2px solid #e4b0c1;border-radius:14px;padding:12px;background:white;color:#542536}
+textarea{resize:vertical;min-height:110px}
+label{font-family:Arial,sans-serif;font-size:13px;font-weight:bold}
+.nav{position:fixed;z-index:30;bottom:13px;left:50%;transform:translateX(-50%);background:white;padding:7px;border-radius:999px;box-shadow:0 12px 35px #64223b2b;display:flex}
+.nav button{border:0;background:transparent;border-radius:50%;width:39px;height:39px}
+.nav button.active{background:#f4b4c8}
+#toast{position:fixed;z-index:99;top:15px;left:50%;transform:translate(-50%,-90px);background:#552036;color:white;border-radius:99px;padding:12px 20px;transition:.3s;font-family:Arial,sans-serif}
+#toast.show{transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+
+<div id="toast"></div>
+<script>
+for(let i=0;i<12;i++){
+ const h=document.createElement('div');h.className='heart';h.textContent='♥';
+ h.style.left=Math.random()*100+'%';h.style.animationDelay=(-Math.random()*9)+'s';
+ h.style.animationDuration=(7+Math.random()*6)+'s';document.body.appendChild(h);
+}
+</script>
+
+<!-- 1 -->
+<section class="page active" id="p1">
+<div class="container center" style="padding-top:7vh">
+<div class="eyebrow">A little surprise for you</div>
+<div class="hearts">♥ ♥ ♥</div>
+<div class="envelope" id="envelope">
+<div class="env-back"></div>
+<div class="env-letter"><b>For My Hubby 💗</b><br><br><span>You have a little surprise waiting for you...</span></div>
+<div class="env-flap"></div>
+</div>
+<h1>For My<br>Hubby</h1>
+<p class="soft">Open this and start our little journey.</p>
+<button class="btn" onclick="openEnvelope()">Open 💌</button>
+</div>
+</section>
+
+<!-- 2 -->
+<section class="page" id="p2">
+<div class="container center" style="padding-top:7vh">
+<div class="eyebrow">This little website is for</div>
+<h1>My Hubby</h1>
+<div class="card">
+<div class="hearts">♥ ♡ ♥</div>
+<p id="intro">You are one of the most special people in my life, and I wanted to make something just for you.</p>
+<button class="btn" onclick="next()">Let's Begin →</button>
+</div>
+</div>
+</section>
+
+<!-- 3 reasons -->
+<section class="page" id="p3">
+<div class="container">
+<div class="center">
+<div class="eyebrow">A few things from my heart</div>
+<h2>5 Reasons I Love You 💕</h2>
+<p class="soft">Tap through each one.</p>
+</div>
+<div id="reasons"></div>
+<div class="row">
+<button class="btn alt" onclick="reason(-1)">← Back</button>
+<button class="btn" onclick="reason(1)">Next →</button>
+</div>
+<div class="progress"><i id="progress"></i></div>
+<div class="center"><button class="btn" onclick="next()">Continue 💗</button></div>
+</div>
+</section>
+
+<!-- 4 cute -->
+<section class="page" id="p4">
+<div class="container">
+<div class="center">
+<div class="eyebrow">And another thing...</div>
+<h2>How Cute You Are 🥹💗</h2>
+</div>
+<div class="cute">
+<div class="big">૮ ˶ᵔ ᵕ ᵔ˶ ა<br>♡</div>
+<p id="cuteText">Hubby ap bohout zaida cute hai ap Jo mujhe voice karte hai apne cute se awaz me I love it yarrrrrrrrrr 😭 ap to mere cutie pie ho yarrr 😚💕</p>
+<p class="hearts">♥ ♥ ♥</p>
+</div>
+<div class="card">
+<p><b>Customize this part:</b></p>
+<textarea id="cuteEdit">Hubby ap bohout zaida cute hai ap Jo mujhe voice karte hai apne cute se awaz me I love it yarrrrrrrrrr 😭 ap to mere cutie pie ho yarrr 😚💕</textarea>
+<div class="center"><button class="btn" onclick="applyCute()">Save my words ✨</button></div>
+</div>
+<div class="center"><button class="btn" onclick="next()">One more thing →</button></div>
+</div>
+</section>
+
+<!-- 5 editable essay -->
+<section class="page" id="p5">
+<div class="container">
+<div class="center">
+<div class="eyebrow">Your own words</div>
+<h2>A Little Message For Hubby 💌</h2>
+</div>
+<div class="card">
+<p class="soft">I have left this completely customizable for you.</p>
+<textarea id="essay" placeholder="Write your own essay / love letter here...">Hubby apko pata hai ap Dunia ke best hubby hai apse ziada Best koi nahe hai is Dunia me ap mere januuu hai mere cutie pie mere cocomo mere bachw sabirah ke jaan mere sweet heart and Sirf mere uncle jeeeeeeeee 💕
+Apko pata hai me apko bohout miss karte ho mere se nahe raha jata apne hubby ke bagir but me kia karo rehna parta hai me ye sub bus apke aik pyare se smile lane ke Lia kia hai I hope ke mere cutie pie ke face cute se smile to agaye hoge ye dekh ke mere jaan mujhe kabhi nahe chorna ye sabirah apse bohout Sara Pyar karte hai itna ke me explain nahe kar sakte ❤️🥹💓
+I loveeeeeeee youuuuuuuuu sooooooooooooooooooo mchhhhhhhhhhh hubbyyyyyyyyyyyyyyyy jeeeeeeeeeee umahhhhhhhhhh 💋😚🫀💓</textarea>
+<div class="center"><button class="btn" onclick="saveEssay()">Save Message 💗</button></div>
+</div>
+<div class="card center">
+<p id="essayPreview" class="soft">Hubby apko pata hai ap Dunia ke best hubby hai apse ziada Best koi nahe hai is Dunia me ap mere januuu hai mere cutie pie mere cocomo mere bachw sabirah ke jaan mere sweet heart and Sirf mere uncle jeeeeeeeee 💕<br><br>Apko pata hai me apko bohout miss karte ho mere se nahe raha jata apne hubby ke bagir but me kia karo rehna parta hai me ye sub bus apke aik pyare se smile lane ke Lia kia hai I hope ke mere cutie pie ke face cute se smile to agaye hoge ye dekh ke mere jaan mujhe kabhi nahe chorna ye sabirah apse bohout Sara Pyar karte hai itna ke me explain nahe kar sakte ❤️🥹💓<br><br>I loveeeeeeee youuuuuuuuu sooooooooooooooooooo mchhhhhhhhhhh hubbyyyyyyyyyyyyyyyy jeeeeeeeeeee umahhhhhhhhhh 💋😚🫀💓</p>
+</div>
+<button class="btn" onclick="next()">Continue →</button>
+</div>
+</section>
+
+<!-- 6 question -->
+<section class="page" id="p6">
+<div class="container center" style="padding-top:8vh">
+<div class="eyebrow">One important question</div>
+<h2>Do You Love Me? 💗</h2>
+<div class="card">
+<p style="font-size:25px">Be honest... 👀</p>
+<div class="row">
+<button class="btn" onclick="yes()">YES, OF COURSE! 💖</button>
+<button class="btn alt" id="no">No 😌</button>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 7 certificate -->
+<section class="page" id="p7">
+<div class="container">
+<div class="certificate">
+<div class="eyebrow">Official document</div>
+<h2>Certificate of<br>Best Hubby 🏆</h2>
+<div class="seal">♥</div>
+<p>This certificate is proudly presented to</p>
+<h1 style="font-size:48px">Hubby</h1>
+<p>For being loving, caring, supportive, adorable, and officially the keeper of my heart.</p>
+<p>✓ Chief Comforter<br>✓ Professional Mood Fixer<br>✓ Full-Time Cutie<br>✓ My Unpaid Therapist<br>✓ Forever My Hubby</p>
+<p class="soft">Valid: Always & Forever</p>
+</div>
+<div class="center"><button class="btn" onclick="next()">Next surprise →</button></div>
+</div>
+</section>
+
+<!-- 8 final award -->
+<section class="page" id="p8">
+<div class="container center" style="padding-top:5vh">
+<div class="eyebrow">The final little surprise</div>
+<div class="card">
+<div style="font-size:70px">🏆💗🏆</div>
+<h2>World's Cutest Hubby Award</h2>
+<p>This award goes to</p>
+<h1 style="font-size:52px">Hubby</h1>
+<p>For being my happiness, my comfort, my support, and my unpaid therapy. 💗</p>
+<button class="btn" onclick="celebrate();next()">Open the final page ✨</button>
+</div>
+</div>
+</section>
+
+<!-- 9 -->
+<section class="page" id="p9">
+<div class="container center" style="padding-top:8vh">
+<div class="eyebrow">The end... or maybe just the beginning</div>
+<h1>Forever<br>My Hubby 💗</h1>
+<div class="card">
+<div class="hearts">♥ ♥ ♥</div>
+<p id="final">No matter how many times I make this page, I will always choose you.</p>
+<p><b>With all my love,<br>Your Wife 💕</b></p>
+</div>
+<button class="btn" onclick="celebrate()">Celebrate Again 🎉</button>
+<button class="btn alt" onclick="go(1)">Start Again ↻</button>
+</div>
+</section>
+
+<div class="nav" id="nav"></div>
+
+<script>
+const reasons=[
+"I love you because ap kabhi bhi sad nahe rehne dete hamesha mujhe happy rakhte ho chahe Mera mood jaisa bhi ho theek kar dete ho.",
+"I love you because ap ko mere fiker hai apne se ziada mere itne care Karna.",
+"I love you because mere silence ko note Karna mere bina Kuch kahe ye samjh Jana ke Mera mood kharab hai.",
+"I love you because ap hamesha mera sath dete ho chahe situation Jo bhi ho mujhe support karte ho.",
+"I love you because you are my unpaid therapy."
+];
+
+let page=1,index=0;
+function q(x){return document.querySelector(x)}
+function go(n){
+ page=Math.max(1,Math.min(9,n));
+ document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+ q('#p'+page).classList.add('active');
+ document.querySelectorAll('.nav button').forEach((b,i)=>b.classList.toggle('active',i===page-1));
+ scrollTo({top:0,behavior:'smooth'});
+}
+function next(){go(page+1)}
+function openEnvelope(){q('#envelope').classList.add('open');setTimeout(next,850)}
+function renderReasons(){
+ q('#reasons').innerHTML=reasons.map((r,i)=>`
+ <div class="card reason ${i===index?'active':''}">
+  <span class="reason-number">Reason ${i+1} of 5</span>
+  <p class="reason-text">${r}</p>
+  <div class="hearts">♥</div>
+ </div>`).join('');
+ q('#progress').style.width=((index+1)/5*100)+'%';
+}
+function reason(d){index=(index+d+5)%5;renderReasons()}
+function applyCute(){q('#cuteText').textContent=q('#cuteEdit').value||'How cute you are! 💗';toast('Saved 💗')}
+function saveEssay(){q('#essayPreview').textContent=q('#essay').value||'Your customized message will appear here.';toast('Your message is saved ✨')}
+function yes(){toast('I knew it! I love you too! 💗');celebrate()}
+function celebrate(){
+ for(let i=0;i<45;i++){
+  const s=document.createElement('span');s.textContent=['♥','❤','✦','•'][Math.floor(Math.random()*4)];
+  s.style.position='fixed';s.style.zIndex=100;s.style.left=Math.random()*100+'%';s.style.top='-20px';
+  s.style.fontSize=10+Math.random()*20+'px';s.style.color='#b52b5a';
+  s.style.transition='transform 2s linear,opacity 2s';document.body.appendChild(s);
+  requestAnimationFrame(()=>{s.style.transform=`translateY(${innerHeight+50}px) rotate(${Math.random()*700}deg)`;s.style.opacity='0'});
+  setTimeout(()=>s.remove(),2200);
+ }
+}
+function toast(t){const x=q('#toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),1600)}
+q('#no').addEventListener('mouseover',function(){this.style.position='fixed';this.style.left=Math.random()*70+15+'%';this.style.top=Math.random()*70+15+'%'});
+q('#no').addEventListener('click',function(){this.style.position='fixed';this.style.left=Math.random()*70+15+'%';this.style.top=Math.random()*70+15+'%'});
+renderReasons();
+const nav=q('#nav');
+['💌','💗','💕','🥹','📝','❓','🏆','🥇','✨'].forEach((x,i)=>{
+ const b=document.createElement('button');b.textContent=x;b.onclick=()=>go(i+1);nav.appendChild(b);
+});
+nav.children[0].classList.add('active');
+</script>
+</body>
+</html>
